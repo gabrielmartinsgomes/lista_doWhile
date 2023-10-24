@@ -11,11 +11,32 @@
     */
 
     //Entrada
+    let nome = prompt(`Insira um nome`).trim();
+    let idade = Number(prompt(`Insira uma idade entre 0 e 150`));
+    let salario = Number(prompt(`Insira seu salário`));
+    let sexo = prompt(`Qual seu sexo? F-Feminino || M-Masculino`).trim().toUpperCase();
+    let civil = prompt(`Qual seu estado civil? S-Solteiro(a) || C-Casado(a) || V-Viúvo(a) || D-Divorciado(a)`).trim().toUpperCase();
 
 
     //Processamento
+    while(nome.length <=3){
+        nome = prompt(`Insira um nome novamente`).trim();
+    }
+    while(idade < 0 || idade > 150){
+        idade = Number(prompt(`Insira uma idade entre 0 e 150 novamente`));
+    }
+    while(salario < 0){
+        salario = Number(prompt(`Insira seu salário corretamente`));
+    }
+    while(sexo != "F" && sexo != "M"){
+        sexo = prompt(`Qual seu sexo? F-Feminino || M-Masculino \nInsira corretamente`).trim().toUpperCase();
+    }
+    while(civil != "S" && civil != "C" && civil != "V" && civil != "D"){
+        civil = prompt(`Qual seu estado civil? S-Solteiro(a) || C-Casado(a) || V-Viúvo(a) || D-Divorciado(a) \nInsira corretamente`).trim().toUpperCase();
+    }
 
 
     //Saída
+    alert(`Nome: ${nome}\nIdade: ${idade} \nSalário: R$${salario.toFixed(2)} \nSexo : ${sexo} \n Estado Civil: ${civil}`)
 
 </script>

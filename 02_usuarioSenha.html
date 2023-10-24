@@ -6,11 +6,18 @@
     */
 
     //Entrada
+    let usuario = prompt(`Informe um nome de usuário`).trim()
+    let senha = prompt(`Informe sua senha`).trim()
 
 
     //Processamento
+    while(usuario == senha){
+        alert(`Erro! A senha é igual o usuário. Por Favor, mude isso.`)
+        senha = prompt(`Informe sua senha novamente`).trim()
+    }
 
 
     //Saída
+    alert(`Seu usuário: ${usuario}\nSua senha: ${senha}`)
 
 </script>

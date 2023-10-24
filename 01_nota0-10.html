@@ -6,9 +6,16 @@
     */
 
     //Entrada
+    let numero = Number(prompt(`Insira uma nota entre 0 e 10.`))
+    while(numero < 0 || numero > 10){
+        alert(`Valor Inválido!`)
+        numero = Number(prompt(`Por Favor. Insira uma nota entre 0 e 10.`))
+    }
 
 
     //Processamento
+    alert(numero)
+    
 
 
     //Saída
