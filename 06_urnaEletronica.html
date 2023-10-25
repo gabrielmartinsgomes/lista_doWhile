@@ -20,13 +20,42 @@
     */
 
     //Entrada
+    let canJoao = 0;
+    let canMaria = 0;
+    let nulo = 0;
+    let branco = 0;
+    let votoUm = Number(prompt(`Informe o primeiro voto: 1. Candidato Joãozinho \n2. Candidato Mariazinha \n3. Nulo \n4. Branco \nQuando terminar os votos, aperte 0.`))
 
 
     //Processamento
+    while (votoUm != 0) {
+        switch (votoUm) {
+            case 1: canJoao++
+
+                break;
+            case 2: canMaria++
+                break;
+            case 3: nulo++
+                break;
+            case 4: branco++
+                break;
+
+            default:
+                break;
+        }
+        votoUm = Number(prompt(`Informe o primeiro voto: 1. Candidato Joãozinho \n2. Candidato Mariazinha \n3. Nulo \n4. Branco \nQuando terminar os votos, aperte 0.`))
+    }
+    let somaVotos = canJoao+canMaria+nulo+branco
+
 
 
     //Saída
+    alert(`Votos de João: ${canJoao} \nVotos de Maria: ${canMaria} \nVotos Nulos: ${nulo} porcentagem: ${((nulo/somaVotos)*100).toFixed(2)}% \nVotos em Branco: ${branco} porcentagem: ${((branco/somaVotos)*100).toFixed(2)}%`)
+    if(canJoao>canMaria){
+        alert(`O vencedor foi João!`)
+    }
+    else{
+        alert(`O vencedor foi Maria!`)
+    }
 
 </script>
-
-

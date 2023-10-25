@@ -6,12 +6,18 @@
     */
 
     //Entrada
-    let senha = Number(prompt(`Informw uma senha`)).trim()
+    let senha = Number(prompt(`Informe uma senha de quatro números inteiros`))
+    let senhaNovamente = Number(prompt(`Informe a senha novamente`))
 
 
     //Processamento
+    while(senha != senhaNovamente){
+        alert(`Senha Incorreta!`)
+        senhaNovamente = Number(prompt(`Informe a senha corretamente`))
+    }
 
 
     //Saída
+    alert(`Senha Correta!`)
 
 </script>
