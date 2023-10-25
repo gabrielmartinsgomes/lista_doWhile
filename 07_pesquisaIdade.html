@@ -18,8 +18,10 @@
     let salario = [];
     let idades = Number(prompt(`Informe a idade de um habitante. Digite um número negativo para parar de informar.`));
     let sexo = "";
-    let salarios = "";
-    let mulhersalario = "Sexo: Feminino, salário: "
+    let salarios = 0;
+    let mediaSalario = 0;
+    let salarioarray = [];
+    let menorSalario = 0;
 
 
     //Processamento
@@ -27,15 +29,25 @@
         idade.push(idades);
         sexo = prompt(`É mulher ou homem? M-Masculino | F-Feminino`).toUpperCase().trim();
         salario = Number(prompt(`Informe o sálario da pessoa`).replace(",", "."));
+        salarioarray.push(salario);
+        
+        
         switch(sexo){
-            case "M": mulheres++
-            mulhersalario = mulhersalario + (`R$${salario.toFixed(2)} \n`)
+            case "F": mulheres++
             break;
-            case
+            case "M":
+            break;
         }
+        salarios+=salario
+        mediaSalario = salarios/salario.length
+
+        idades = Number(prompt(`Informe a idade de um habitante. Digite um número negativo para parar de informar.`));
     }
+    idade.sort((a,b) => a - b);
+    menorSalario = Math.min(salarioarray)
 
 
     //Saída
+    alert(`Média dos salários: R${mediaSalario.toFixed(2)} \nMenor idade: ${idade[0]} anos. \nMaior Idade: ${idade [idade.length - 1]} \nQuantidade de mulheres: ${mulheres} \n A idade e o sexo da pessoa com menor salário: `)
 
 </script>
