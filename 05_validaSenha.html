@@ -6,17 +6,16 @@
     */
 
     //Entrada
-    let senha = Number(prompt(`Informe uma senha de quatro números inteiros`))
-    let senhaNovamente = Number(prompt(`Informe a senha novamente`))
+    let senha = prompt(`Informe uma senha de quatro números inteiros`)
+    
 
 
     //Processamento
-    while(senha != senhaNovamente){
-        alert(`Senha Incorreta!`)
-        senhaNovamente = Number(prompt(`Informe a senha corretamente`))
+    while(senha.length != 4 || isNaN(senha)){
+        alert(`incorreto tente novamente`)
+        senha = prompt(`Informe uma senha de quatro números inteiros`)
     }
-
-
+    
     //Saída
     alert(`Senha Correta!`)
 
