@@ -13,9 +13,27 @@
     */
 
     //Entrada
+    let mulheres = 0;
+    let idade = [];
+    let salario = [];
+    let idades = Number(prompt(`Informe a idade de um habitante. Digite um número negativo para parar de informar.`));
+    let sexo = "";
+    let salarios = "";
+    let mulhersalario = "Sexo: Feminino, salário: "
 
 
     //Processamento
+    while(idades >= 0){
+        idade.push(idades);
+        sexo = prompt(`É mulher ou homem? M-Masculino | F-Feminino`).toUpperCase().trim();
+        salario = Number(prompt(`Informe o sálario da pessoa`).replace(",", "."));
+        switch(sexo){
+            case "M": mulheres++
+            mulhersalario = mulhersalario + (`R$${salario.toFixed(2)} \n`)
+            break;
+            case
+        }
+    }
 
 
     //Saída
